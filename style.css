@@ -3,7 +3,8 @@ body {
 }
 
 h1 {
-    font: 4.4rem Monoton;
+    font-family: Monoton;
+    font-size: 4.4rem;
     margin: 0;
 }
 
