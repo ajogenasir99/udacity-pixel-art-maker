@@ -2,8 +2,13 @@ let table = document.querySelector("#pixelCanvas");
 let form = document.querySelector("#sizePicker");
 let color = document.querySelector("#colorPicker");
 
-
 form.addEventListener("submit", makeGrid);
+
+/*
+* @description creates a grid of squares
+* @param int $width - number of squares representing the width of the grid
+* @param int $height - number of squares representing the height of the grid
+*/
 
 
 function makeGrid(e) {
@@ -24,6 +29,11 @@ function makeGrid(e) {
 };
 
 table.addEventListener('click', colorChange)
+
+/*
+* @description changes the color of selected grid boxes to a color of your choice
+*/
+
 
 function colorChange(e) {
     let currentColor = color.value;
