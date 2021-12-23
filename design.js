@@ -16,16 +16,20 @@ function makeGrid(e) {
     e.preventDefault();
     let height = document.querySelector("#inputHeight").value;
     let width = document.querySelector("#inputWidth").value;
-    for (let i = 1; i <= height; i++) {
+    if (width <= 60 && height <= 35){
+      for (let i = 1; i <= height; i++) {
         let tableRow = document.createElement("tr");
         table.appendChild(tableRow);
         for (let j = 1; j <= width; j++) {
             let tableData = document.createElement("td");
             tableRow.appendChild(tableData);
             
-        }
-        
-    }
+        }  
+      }
+   }
+   else {
+       alert('Grid too big! please pick a height less than 36 and a width less than 61');
+   }
 };
 
 table.addEventListener('click', colorChange)
